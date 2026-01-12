@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business is Back - RCOB Welcome</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Montserrat:wght@900&display=swap');
+
+        :root {
+            --unt-green: #00853E;
+            --unt-white: #ffffff;
+            --gold-accent: #FFD700;
+            --dark-accent: #054a24;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Container for the massive logo */
+        .game-show-container {
+            position: relative;
+            text-align: center;
+            padding: 80px 100px;
+            background: radial-gradient(circle, var(--unt-green) 0%, var(--dark-accent) 100%);
+            border: 15px solid var(--unt-white);
+            border-radius: 50px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3), 
+                        inset 0 0 120px rgba(0,0,0,0.6),
+                        0 0 0 10px var(--unt-green);
+            transform: perspective(1000px) rotateX(5deg);
+            max-width: 90%;
+        }
+
+        /* The Animated Light Bulbs - Marquee Style */
+        .lights {
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            right: -30px;
+            bottom: -30px;
+            border: 10px dotted var(--gold-accent);
+            border-radius: 60px;
+            pointer-events: none;
+            animation: blink 0.8s infinite steps(2);
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; filter: drop-shadow(0 0 5px var(--gold-accent)); }
+            100% { opacity: 0.5; filter: none; }
+        }
+
+        /* Typography */
+        .logo-main {
+            margin: 0;
+            padding: 0;
+        }
+
+        .word-business {
+            font-family: 'Bungee Shade', cursive;
+            font-size: clamp(60px, 12vw, 130px);
+            color: var(--unt-white);
+            text-shadow: 5px 5px 0px var(--unt-green), 10px 10px 20px rgba(0,0,0,0.4);
+            line-height: 0.8;
+            display: block;
+        }
+
+        .word-is-back {
+            font-family: 'Bungee', cursive;
+            font-size: clamp(70px, 14vw, 150px);
+            color: var(--gold-accent);
+            text-shadow: 4px 4px 0px #b38f00, 8px 8px 0px var(--unt-white);
+            -webkit-text-stroke: 2px var(--dark-accent);
+            display: block;
+            margin-top: 10px;
+            letter-spacing: -2px;
+        }
+
+        .rcob-subtitle {
+            background: var(--unt-white);
+            color: var(--unt-green);
+            display: inline-block;
+            padding: 15px 50px;
+            font-size: clamp(18px, 3vw, 36px);
+            font-weight: 900;
+            border-radius: 50px;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive scaling */
+        @media (max-width: 768px) {
+            .game-show-container { padding: 40px 20px; border-width: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-show-container">
+        <div class="lights"></div>
+        
+        <div class="logo-main">
+            <span class="word-business">BUSINESS</span>
+            <span class="word-is-back">IS BACK!</span>
+        </div>
+
+        <div class="rcob-subtitle">
+            Welcome Home, RCOB Students
+        </div>
+    </div>
+
+</body>
+</html>
